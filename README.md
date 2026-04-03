@@ -2,29 +2,20 @@
 
 # 📊 Electricity Prices, Unreliability, and Household Welfare in the Philippines
 
-## ⚡ TL;DR
-
-- Electricity prices reduce household welfare  
-- Education is the most affected category  
-- Unreliability increases costs through coping behavior  
-- Effects are strongest for low-income households  
-
----
-
 ## 📌 Overview
 
-Electricity access in the Philippines is nearly universal—but household welfare has not improved proportionally.
+Electricity access in the Philippines is nearly universal, but household welfare has not improved proportionally.
 
 This project investigates why.
 
 > **Key question:**  
-> How do electricity prices and unreliable supply affect how households allocate their budgets?
+> How do electricity prices and unreliable electricity supply affect household welfare in the Philippines?
 
 ---
 
 ## 💡 Key Insight
 
-> Electricity is not just a cost—it reshapes household decision-making.
+> Electricity is not just a cost. It reshapes household decision-making.
 
 It affects welfare through:
 
@@ -42,8 +33,7 @@ It affects welfare through:
 
 - Method:
   - OLS regression (log-log)
-  - Coefficients interpreted as elasticities  
-  - Interaction terms (urban vs rural)  
+  - Coefficients interpreted as elasticities    
   - Income grouping (heterogeneity)
 
 ---
@@ -52,7 +42,7 @@ It affects welfare through:
 
 - Merged household + electricity datasets  
 - Constructed unreliability index  
-- Applied log transformations  
+- Applied log transformations for electricity prices
 - Estimated regression models across welfare categories  
 
 ---
@@ -84,9 +74,9 @@ All models include grid fixed effects.*
 - Education is the most price-sensitive category → long-term investment is sacrificed  
 - Increased spending under unreliability reflects **coping costs**, not welfare gains  
 
-> A 10% increase in electricity prices leads to:
-> - ~1.5% decrease in food expenditure  
-> - ~15.9% decrease in education expenditure  
+> A 1% increase in electricity prices leads to:
+> - ~0.15% decrease in food expenditure  
+> - ~1.59% decrease in education expenditure  
 
 ---
 
@@ -96,8 +86,32 @@ All models include grid fixed effects.*
 
 ---
 
-## 📁 Repository Structure
+## 📦 Data
 
+The dataset is not publicly included due to access restrictions.
+
+To replicate:
+- FIES-LFS household data  
+- DOE electricity prices  
+- ERC reliability indicators  
+- Regional socioeconomic data  
+
+---
+
+## 🚀 Why This Project Matters
+
+This project demonstrates:
+
+- End-to-end data workflow  
+- Econometric modeling (elasticities, interactions)  
+- Policy-relevant insights  
+- Ability to translate data into decisions  
+
+---
+
+## 🔗 Code
+
+See full analysis here:
 
   code/
    └── electricity-welfare-analysis.do
@@ -340,59 +354,3 @@ forvalues i = 1/3 {
 *====================================================*
 * END OF FILE
 *====================================================*/
-
-  README.md
-
-📊 Electricity Prices, Unreliability, and Household Welfare in the Philippines
- 
-  📌 Overview
-
-  Electricity access in the Philippines is nearly universal—but household welfare has not improved proportionally.
-  This project investigates why.
-
-  Key question:
-  
-  How do electricity prices and unreliable supply affect how households allocate their budgets?
- 
-  Using household-level data, this study shows that electricity constraints reshape spending on essential goods such     as food, health, education, and communication.
-
-  💡 Key Insight
-
-  Electricity is not just a cost—it reshapes household decision-making. It affects welfare through two mechanisms:
-
-  Price constraint → reduces disposable income and compresses consumption
-  Reliability constraint → forces households to spend more on coping strategies
-  
-  ⚙️ Approach
-
-  Dataset: 163,095 households from the 2023 FIES-LFS
-  Merged with: Provincial electricity prices (DOE), Reliability indicators (SAIDI/SAIFI, ERC)
-  Methodology: OLS regression (log-log specification)
-
-  Coefficients interpreted as elasticities
-  Interaction terms to capture urban/rural differences
-  Income grouping for heterogeneous effects
-  
-  ⚙️ Data Workflow
-
-  - Merged household survey with provincial electricity data
-  - Constructed an electricity unreliability index using SAIDI and SAIFI
-  - Applied log transformations for elasticity interpretation
-  - Estimated regression models across multiple welfare dimensions
-    
-  📊 Key Results
-  
-  Electricity prices reduce household welfare
-    - Higher prices → lower spending on food and total consumption
-
-  Unreliability increases expenditure—but not welfare
-    - ↑ Health, education, and communication spending
-
-  📦 Data
-
-  The dataset is not publicly included due to access restrictions. To replicate the analysis, you will need:
-
-  - Household survey data (FIES-LFS)
-  - Electricity price data (DOE)
-  - Reliability indicators (SAIDI/SAIFI)
-  - Regional socioeconomic variables
