@@ -59,7 +59,7 @@ It affects welfare through:
 
 ## 📈 Regression Results
 
-![Regression Results](https://raw.githubusercontent.com/AltheaJonos/electricity-welfare-analysis/main/output/regression_results.png)
+![Regression Results](regression_results.png)
 
 *Table: Impact of electricity prices on household welfare outcomes. 
 Coefficients represent elasticities. Standard errors in parentheses. 
