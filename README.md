@@ -1,5 +1,104 @@
 # electricity-welfare-analysis
 
+# 📊 Electricity Prices, Unreliability, and Household Welfare in the Philippines
+
+## ⚡ TL;DR
+
+- Electricity prices reduce household welfare  
+- Education is the most affected category  
+- Unreliability increases costs through coping behavior  
+- Effects are strongest for low-income households  
+
+---
+
+## 📌 Overview
+
+Electricity access in the Philippines is nearly universal—but household welfare has not improved proportionally.
+
+This project investigates why.
+
+> **Key question:**  
+> How do electricity prices and unreliable supply affect how households allocate their budgets?
+
+---
+
+## 💡 Key Insight
+
+> Electricity is not just a cost—it reshapes household decision-making.
+
+It affects welfare through:
+
+- **Price constraint** → reduces disposable income  
+- **Reliability constraint** → forces costly coping behavior  
+
+---
+
+## ⚙️ Approach
+
+- Dataset: 163,095 households (2023 FIES-LFS)  
+- Merged with:
+  - Electricity prices (DOE)  
+  - Reliability indicators (SAIDI/SAIFI, ERC)  
+
+- Method:
+  - OLS regression (log-log)
+  - Coefficients interpreted as elasticities  
+  - Interaction terms (urban vs rural)  
+  - Income grouping (heterogeneity)
+
+---
+
+## ⚙️ Data Workflow
+
+- Merged household + electricity datasets  
+- Constructed unreliability index  
+- Applied log transformations  
+- Estimated regression models across welfare categories  
+
+---
+
+## 📊 Key Results
+
+- Electricity prices reduce consumption across all categories  
+- **Education shows the largest decline (~15.9%)**  
+- Food declines modestly (~1.5%), consistent with necessity behavior  
+- Unreliability increases spending on health, education, and communication  
+- Effects are strongest for low-income households  
+
+---
+
+## 📈 Regression Results
+
+![Impact of Electricity Prices on Household Welfare](output/regression_results.png)
+
+*Table: Impact of electricity prices on household welfare outcomes. 
+Coefficients represent elasticities. Standard errors in parentheses. 
+All models include grid fixed effects.*
+
+---
+
+## 🔎 Interpretation
+
+- Electricity behaves like a **quasi-fixed cost**, compressing household budgets  
+- Households reduce spending on essential goods (crowding-out effect)  
+- Education is the most price-sensitive category → long-term investment is sacrificed  
+- Increased spending under unreliability reflects **coping costs**, not welfare gains  
+
+> A 10% increase in electricity prices leads to:
+> - ~1.5% decrease in food expenditure  
+> - ~15.9% decrease in education expenditure  
+
+---
+
+## 💡 Key Takeaway
+
+> Rising electricity costs force households to sacrifice long-term welfare (education) to sustain short-term survival.
+
+---
+
+## 📁 Repository Structure
+
+
   code/
    └── electricity-welfare-analysis.do
 
